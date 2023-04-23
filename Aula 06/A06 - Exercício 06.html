@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício  06</title>
+</head>
+
+<body>
+
+    Time de São Paulo que você torce: <input id="input_timeSP">
+    <br>
+    <button onclick="resultado()">
+        Fale sobre esse time
+    </button>
+
+    <p id="corinthiano"></p>
+    <p id="palmeirense"></p>
+    <p id="santista"></p>
+    <p id="sp"></p>
+
+</body>
+</html>
+
+<script>
+
+    function resultado() {
+        var time = input_timeSP.value
+
+        if(time == "Corinthians") {
+            corinthiano.innerHTML = ` <p style="color:white; background-color:black"> Salve o Corinthians`
+        } else if(time == "Palmeiras") {
+            palmeirense.innerHTML = `<p style="color:white; background-color:green">Salve o alviverde imponente`
+        } else if(time == "Santos") {
+            santista.innerHTML = `Agora quem dá a bola é o Santos`
+        } else {
+            sp.innerHTML = `<p style="color:red; background-color:black">Salve o Tricolor paulista`
+        }
+    }
+</script>

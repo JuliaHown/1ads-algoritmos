@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+</head>
+<body>
+
+    Valor que têm economizado: <input id="input_economizado">
+    <br>
+    <button onclick="economias()">
+        Poder de compra
+    </button>
+
+    <p id="semcompras"></p>
+    <p id="viagem"></p>
+    <p id="moto"></p>
+    <p id="bobagens"></p>
+
+</body>
+</html>
+
+<script>
+
+    function economias() {
+        var economizado = Number(input_economizado.value);
+
+        if(economizado <= 0) {
+            semcompras.innerHTML = `Nada de compras :(`
+        } else if(economizado < 100) {
+            viagem.innerHTML = `Viagem de ida e volta pra Praia Grande`
+        } else if(economizado < 4000) {
+            moto.innerHTML = `Uma boa moto usada`
+        } else {
+            bobagens.innerHTML = `Mais alguma bobagem legal`
+        }
+    }
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Temperatura: <input id="input_temperatura" />
+    <button onclick="analisar()">Analisar Temperatura</button>
+    <button onclick="analisar_else_if()">Analisar Temperatura Otimizado (ELSE IF)</button>
+  </body>
+</html>
+
+<script>
+  function analisar() {
+    var temperatura = Number(input_temperatura.value);
+
+    if (temperatura >= 10) { // se for maior ou igual a 10
+      if (temperatura <= 20) { // se for maior ou igual a 10 e menor ou igual a 20
+        alert("A temperatura está ideal");
+      } else { // se for maior ou igual a 10 e maior que 20
+        alert("A temperatura está muito alta");
+      }
+    } else { // se for menor que 10
+      alert("A temperatura está muito baixa!");
+    }
+    
+    /*
+      if (temperatura > 20) {
+        alert("Temperatura muito alta");
+      } else {
+        if (temperatura >= 10) {
+          alert("Temperatura ideal");
+        } else {
+          alert("Temperatura baixa");
+        }
+      }
+
+      if (temperatura >= 10) {
+        if (temperatura <= 20) {
+          alert("Temperatura ideal");
+        } else { 
+          alert("Temperatura muito alta");
+        }
+      } else {
+        alert("Temperatura muito baixa");
+      }
+    */
+  }   
+
+  function analisar_else_if() {
+    var temperatura = Number(input_temperatura.value);
+    var mensagem = "";
+
+    if (temperatura < 10) { // se for menor que 10
+      mensagem = "muito baixa";
+    } else if (temperatura > 20) { // se for maior ou igual a 10 e maior que 20
+      mensagem = "muito alta";
+    } else { // se for maior ou igual a 10 e menor ou igual a 20
+      mensagem = "ideal";
+    }
+
+    alert(`A temperatura está ${mensagem}`);
+  }
+
+  /*
+      A estrutura "else-if" representa um ANINHAMENTO de estruturas de decisão
+      É utilizado quando precisamos validar mais de 2 cenários
+
+      No exemplo acima, temos 3 cenários: 
+        - Temperatura menor 10
+        - Temperatura entre 10 e 20
+        - Temperatura maior que 20
+
+      Portanto, devemos validar passo a passo cada um dos cenários
+
+      Uma forma de validar por etapas, seria: 
+      1. Validar primeiro se é menor que 10 ou maior que 10;
+      1.1. Caso seja menor que 10, exibe a mensagem "Muito Baixa" e encerra;
+      1.2. Caso seja maior ou igual a 10, validar também se é menor que 20 (sabendo que o mínimo é 10, pois já passou na primeira validação!);
+      1.2.1. Caso seja menor ou igual a 20, exibe a mensagem "Ideal" e encerra, pois significa que a temperatura está entre 10 e 20, pois já passou pela validação anterior do ">= 10"
+      1.2.2. Caso seja maior que 20, exibe a mensagem "Muito Alta" e encerra
+
+
+      Exemplo de código das validações acima:
+      
+      if (temperatura < 10) {   // se caiu aqui, é menos de 10
+        alert("Muito Baixa")
+      } else {     // se caiu aqui, é 10 ou mais
+        if (temperatura <= 20) {   // se caiu aqui, é 20 ou menos 
+          alert("Ideal")
+        } else {    // se caiu aqui, é mais que 20 
+          alert("Muito Alta")
+        }
+      }
+
+    */
+</script>

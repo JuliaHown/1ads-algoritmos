@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+
+    Sua altura: <input id="inputAltura">
+    <br>
+    <button onclick="analise()">
+        Analisar Estatura
+    </button>
+
+    <p id="piloto"></p>
+    <p id="futebol"></p>
+    <p id="basquete"></p>
+
+</body>
+</html>
+
+<script>
+
+    function analise() {
+        var estatura = Number(inputAltura.value)
+
+        if(estatura < 1.65) {
+            piloto.innerHTML = `Você pode ser piloto de corrida`
+        } else if (estatura > 1.80) {
+            basquete.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+        } else {
+            futebol.innerHTML = `Você pode ser jogador de futebol`
+        }
+    }
+</script>

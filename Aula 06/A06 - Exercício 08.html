@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+
+    Qtd de pães franceses consumidos por dia: <input id="input_paes">
+    <br>
+    Qtd pacotes de bolacha reachada consumidos por dia: <input id="input_bolacha">
+    <br>
+    Qtd de copos de achocolatado tomados por dia: <input id="input_achocolatado">
+
+    <button onclick="totalCalorias()">
+        Verificar calorias
+    </button>
+
+    <p id="menor200"></p>
+    <p id="menor400"></p>
+    <p id="maior400"></p>
+
+</body>
+</html>
+
+<script>
+
+    function totalCalorias() {
+        var caloriasPães = Number(input_paes.value * 50);
+        var caloriasBolacha = Number(input_bolacha.value * 80);
+        var caloriasAchocolatado = Number(input_achocolatado.value * 70);
+        var totalCalorias = caloriasPães + caloriasBolacha + caloriasAchocolatado;
+
+        if(totalCalorias < 200) {
+            menor200.innerHTML = `Parabéns, vai sair em forma da quarentena!`
+        } else if(totalCalorias <= 400) {
+            menor400.innerHTML = `Cuidado, vai ficar mais fofinho(a)`
+        } else {
+            maior400.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`
+        }
+    }
+</script>

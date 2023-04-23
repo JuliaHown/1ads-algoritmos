@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+
+    Renda mensal: <input id="input_renda">
+    <br>
+    <button onclick="resultado()">
+        Analisar Renda
+    </button>
+
+    <p id="classeE"></p>
+    <p id="classeD"></p>
+    <p id="classeC"></p>
+    <p id="classeB"></p>
+    <p id="classeA"></p>
+
+</body>
+</html>
+
+<script>
+
+    function resultado() {
+        var RendaMensal = Number(input_renda.value);
+
+        if(RendaMensal <= 250) {
+            classeE.innerHTML = `Classe E`
+        } else if(RendaMensal < 900) {
+            classeD.innerHTML = `Classe D`
+        } else if(RendaMensal < 2500) {
+            classeC.innerHTML = `Classe C`
+        } else if(RendaMensal < 9500) {
+            classeB.innerHTML = `Classe B`
+        } else {
+            classeA.innerHTML = `Classe A`
+        }
+    }
+</script>
