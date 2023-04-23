@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    Temperatura do ambiente: <input id="input_temperatura">
+    <br>
+
+    <button onclick="clima()">
+        Verificar clima
+    </button>
+
+    <p id="apropriada"></p>
+    <p id="inapropriada"></p>
+
+</body>
+</html>
+
+<script>
+
+    function clima() {
+        var Temperatura = Number(input_temperatura.value);
+
+        if(Temperatura < 10) {
+            apropriada.innerHTML = `<img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/89E2/production/_106589253_amino.jpg">`
+        } else {
+            inapropriada.innerHTML = `<img src="https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2021/06/comida-estragada-principais-sinais-de-contaminacao-dos-alimentos-1.jpg">`
+        }
+    }
+</script>

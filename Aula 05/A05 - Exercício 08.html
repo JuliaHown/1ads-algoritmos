@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    Quantidade de homens no elevador: <input id="inputHomens">
+    <br>
+    Quantidade de mulheres no elevador: <input id="inputMulheres">
+
+    <button onclick="elevadorLigado()">
+        Ligar elevador
+    </button>
+
+    <p id="elevadorMovendo"></p>
+    <p id="elevadorParado"></p>
+
+</body>
+</html>
+
+<script>
+
+    function elevadorLigado() {
+        var Homens = Number(inputHomens.value * 90);
+        var Mulheres = Number(inputMulheres.value * 70);
+        var pesoElevador = Homens + Mulheres
+        var PerdaPeso = pesoElevador - 500;
+
+        if(pesoElevador < 500) {
+            elevadorMovendo.innerHTML = `<p style="color:green">O Elevador vai se mover, pois está com <b>${pesoElevador}</b> kg.`
+        } else {
+            elevadorParado.innerHTML = `<p style="color:red">Alguém precisa descer. Precisa perder <b>${PerdaPeso}</b> kg para mover o elevador.`
+        }
+
+    }
+</script>

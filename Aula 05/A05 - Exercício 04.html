@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    Sua frequência nas aulas: <input id="inputFrequencia"> <br>
+
+     <button onclick="analise()">
+        Analisar frequência
+     </button>
+
+     <p id="turista"></p>
+     <p id="estudioso"></p>
+
+</body>
+</html>
+
+<script>
+
+    function analise() {
+        var FrequênciaAluno = Number(inputFrequencia.value);
+
+        if (FrequênciaAluno < 50) {
+            turista.innerHTML = `<img src="https://s.calendarr.com/upload/datas/di/at/dia-turista_c.jpg">`
+        } else {
+            turista.innerHTML = `<img src="https://media.istockphoto.com/id/1243744124/pt/foto/ethnic-student-making-notes-during-online-lesson.jpg?s=612x612&w=0&k=20&c=c15vTvGQBpVWems3B4uzuvCd63GTgIIxsPPoOtE2gnM=">`
+        }
+    }
+</script>
