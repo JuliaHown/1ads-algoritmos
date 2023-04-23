@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05 - Lista de Introdução de Operações</title>
+</head>
+<body>
+    Nota da continuada: <input id="input_notaContinuada">
+    <br>
+    Nota da semanal: <input id="input_notaSemanal">
+    <br>
+    Nome do aluno: <input id="input_nomeAluno">
+    <button onclick="calcular_media()">
+        Ver média
+    </button>
+</body>
+</html>
+
+<script>
+
+    function notaContinuada() {
+        var continuada = Number(input_notaContinuada.value)
+        var semanal = Number(input_notaSemanal.value)
+        var media = (continuada * 0.4) + (semanal * 0.6)
+        
+        var nome = input_nomeAluno.value
+        alert("A média de " + nome + " será de " + media)
+    }
+
+</script>

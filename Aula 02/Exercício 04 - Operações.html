@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04 - Lista de Introdução de Operações</title>
+</head>
+<body>
+    Nome do guerreiro: <input id="input_nomeGuerreiro">
+    <br>
+    Ki normal do guerreiro: <input id="input_kiGuerreiro">
+    <button onclick="nomeGuerreiro()">
+        Ver ki em cada forma
+    </button>
+</body>
+</html>
+
+<script>
+
+    function nomeGuerreiro() {
+        var nomeSayajin = input_nomeGuerreiro.value
+        var supersayajin = (Number(input_kiGuerreiro.value * 1.5))
+        var supersayajin2 = (Number(input_kiGuerreiro.value * 2))
+        alert("O guerreiro " + nomeSayajin + " na sua forma Super Sayajin possui o Ki total de " 
+        + supersayajin)
+        alert("O guerreiro " + nomeSayajin + " na sua forma Super Sayajin 2 possui o Ki total de " 
+        + supersayajin2)
+    }
+
+</script>

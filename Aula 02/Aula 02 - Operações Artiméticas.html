@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Operações Aritméticas</title>
+</head>
+<body>
+    
+    Primeiro Número: <input id="input_numero1">
+    <br>
+    Segundo Número: <input id="input_numero2">
+    <br>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="somar()">Somar</button>
+
+</body>
+</html>
+
+<script>
+
+    function multiplicar() {
+        var numero1 = Number(input_numero1.value)
+        var numero2 = Number(input_numero2.value)
+        var multiplicacao = numero1 * numero2
+        alert("Realizando multiplicação: " + multiplicacao)
+    }
+
+    function dividir() {
+        var numero1 = Number(input_numero1.value)
+        var numero2 = Number(input_numero2.value)
+        var divisao = numero1 / numero2
+        alert("Realizando divisão: " + divisao)
+    }
+
+    function subtrair() {
+        var numero1 = Number(input_numero1.value)
+        var numero2 = Number(input_numero2.value)
+        var subtrair = numero1 - numero2
+        alert("Realizando subtração: " + subtrair)
+    }
+
+    function somar() {
+        var numero1 = Number(input_numero1.value)
+        var numero2 = Number(input_numero2.value)
+        var soma = numero1 + numero2
+        alert("Realizando soma: " + soma)
+    }
+
+</script>
+

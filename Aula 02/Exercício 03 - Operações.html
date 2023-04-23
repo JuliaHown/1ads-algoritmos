@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03 - Lista de Introdução de Operações</title>
+</head>
+<body>
+    Valor da passagem: <input id="input_valorPassagem">
+    <br>
+    Quantidade de viagens por mês: <input id="input_qtdViagens">
+    <button onclick="valorPassagem()">
+        Ver economia
+    </button>
+</body>
+</html>
+
+<script>
+
+    function valorPassagem() {
+        var custo = (Number(input_valorPassagem.value * input_qtdViagens.value))
+        var valorPago = (Number(custo / 2))
+        var economia = (Number(custo - valorPago))
+        alert("Você economizará R$ " + economia)
+    }
+
+</script>
