@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Exercício 02</title>
+</head>
+<body>
+
+    Valor do salário: <input id="inputSalario">
+    <br>
+    <button onclick="verificarSalario()">
+        Confirmar salário
+    </button>
+    <button onclick="pagar100()">
+        Pagar conta de 100
+    </button>
+    <button onclick="pagar500()">
+        Pagar conta de 500
+    </button>
+    <button onclick="ganhar2000()">
+        Ganhar 2000 na loteria
+    </button>
+
+    <p id="granaAtual"></p>
+    <p id="menos100"></p>
+    <p id="menos500"></p>
+    <p id="loteria"></p>
+</body>
+</html>
+
+<script>
+
+    var salario = 0;
+
+    function verificarSalario() {
+        salario = Number(inputSalario.value);
+        granaAtual.innerHTML = `Grana atual: R$${salario}`
+    }
+
+    function pagar100() {
+        var pagar100 = salario - 100;
+        granaAtual.innerHTML = `Grana atual: R$${pagar100}`
+    }
+
+    function pagar500() {
+        var pagar500 = salario - 500;
+        granaAtual.innerHTML = `Grana atual: R$${pagar500}`
+    }
+
+    function ganhar2000() {
+        var loteria = salario + 2000
+        granaAtual.innerHTML = `Grana atual: R$${loteria}`
+    }
+
+
+</script>

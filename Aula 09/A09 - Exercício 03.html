@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercicio 03</title>
+</head>
+
+<body>
+
+    Valor: <input id="input_valor"> <br><br>
+
+    <button onclick="depositar50()">
+        Depositar 0,50
+    </button>
+    <button onclick="depositar2()">
+        Depositar 2,00
+    </button>
+    <button onclick="tirar50()">
+        Retirar 0,50
+    </button>
+    <button onclick="retirar()">
+        Retirar
+    </button>
+
+    <div style="color:blue">
+        Total guardado no cofrinho: R$<span id="cofre">0</span> <br>
+        Depositos efetuados: <span id="depositado">0</span> <br>
+        Retiradas efetuadas: <span id="retirado">0</span>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var banco = 0;
+    var depositos = 0;
+    var retiradas = 0;
+
+    function depositar50() {
+        banco += 0.5
+        depositos ++
+        cofre.innerHTML = banco;
+        depositado.innerHTML = depositos;
+    }
+
+    function depositar2() {
+        banco += 2
+        depositos ++
+        cofre.innerHTML = banco
+        depositado.innerHTML = depositos
+    }
+
+    function tirar50() {
+        banco -= 0.5
+        retiradas ++
+        cofre.innerHTML = banco
+        retirado.innerHTML = retiradas
+    }
+
+    function retirar() {
+        banco -= input_valor.value
+        retiradas ++
+        cofre.innerHTML = banco
+        retirado.innerHTML = retiradas
+    }
+
+</script>

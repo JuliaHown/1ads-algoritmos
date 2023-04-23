@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercicio 03</title>
+</head>
+
+<body>
+
+    <button onclick="depositar50()">
+        Depositar 0,50
+    </button>
+    <button onclick="depositar2reais()">
+        Depositar 2,00
+    </button>
+    <button onclick="menos050()">
+        Retirar 0,50
+    </button>
+
+    <p id="depositocentavos"></p>
+</body>
+
+</html>
+
+<script>
+
+    var totalGuardado = 0;
+    var depositoEfetuado = 0;
+    var saques = 0;
+
+
+
+    function depositar50() {
+        totalGuardado = Number(totalGuardado + 0.5);
+        depositoEfetuado = Number(depositoEfetuado + 1)
+
+        depositocentavos.innerHTML = `<p style = "color:blue">Total guardado no cofrinho: R$ <u>${totalGuardado}</u> <br>
+        Depositos efetuados: <u>${depositoEfetuado}</u> <br>
+        Retiradas efetuadas: <u>${saques}</u>`
+    }
+
+    function depositar2reais() {
+        totalGuardado = Number(totalGuardado + 2);
+        depositoEfetuado = Number(depositoEfetuado + 1)
+
+        depositocentavos.innerHTML = `<p style = "color:blue">Total guardado no cofrinho: R$ <u>${totalGuardado}</u> <br>
+        Depositos efetuados: <u>${depositoEfetuado}</u> <br>
+        Retiradas efetuadas: <u>${saques}</u>`
+    }
+
+    function menos050() {
+        totalGuardado = Number(totalGuardado - 0.50);
+        saques = Number(saques + 1)
+
+        depositocentavos.innerHTML = `<p style = "color:blue">Total guardado no cofrinho: R$ <u>${totalGuardado}</u> <br>
+        Depositos efetuados: <u>${depositoEfetuado}</u> <br>
+        Retiradas efetuadas: <u>${saques}</u>`
+    }
+</script>
