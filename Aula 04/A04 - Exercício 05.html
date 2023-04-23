@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 05</title>
 </head>
+
 <body>
-    
+
     Quantidade de kWh consumida no mês: <input id="input_kWh_mes"> <br>
     <button onclick="kWh_consumido()">
         Calcular conta de luz
@@ -17,22 +19,23 @@
     <div id="contaDesconto"></div>
 
 </body>
+
 </html>
 
 <script>
 
     function kWh_consumido() {
         var contaLuz = Number(input_kWh_mes.value) * 0.85
-        var desconto = contaLuz - (contaLuz * 0.1) 
+        var desconto = contaLuz - (contaLuz * 0.1)
 
         if (input_kWh_mes.value < 100) {
             contaDesconto.innerHTML = `O valor da conta com 10% de desconto (kWh < 100) é de R$ ${desconto}`
         }
 
-            contaTotal.innerHTML = `O valor da conta é de R$ ${contaLuz}`
+        contaTotal.innerHTML = `O valor da conta é de R$ ${contaLuz}`
 
     }
-        
-        
+
+
 
 </script>

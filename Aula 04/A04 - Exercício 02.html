@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 02</title>
 </head>
+
 <body>
     Quantidade de latinhas bebidas por dia: <input id="inputLatasBebidas"> <br>
     <button onclick="refri_por_ano()">
@@ -15,11 +17,12 @@
     <div id="diabetes"></div>
     <div id="anoTotal"></div>
 </body>
+
 </html>
 
 <script>
 
-    function refri_por_ano(){
+    function refri_por_ano() {
         var bebidasEmUmAno = Number(inputLatasBebidas.value) * 365
 
         anoTotal.innerHTML = `Esse ano você bebeu ${bebidasEmUmAno} latinhas`

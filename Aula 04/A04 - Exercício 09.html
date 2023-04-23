@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 09</title>
 </head>
+
 <body>
-    
+
     Última série que você assistiu: <input id="input_serieAssistida"> <br>
     Total de episódios que você assistiu dessa série: <input id="input_episodiosVistos"> <br>
 
@@ -19,12 +21,13 @@
     <div id="menosDe30"></div>
 
 </body>
+
 </html>
 
 <script>
 
     function usuarioNivel() {
-        var episódiosVistos = Number(input_episodiosVistos.value) 
+        var episódiosVistos = Number(input_episodiosVistos.value)
         var série = input_serieAssistida.value
         var horasAssistidas = (episódiosVistos * 22) / 60
 
@@ -35,7 +38,7 @@
         if (horasAssistidas < 30) {
             menosDe30.innerHTML = `Vejo que você gosta da série ${série}`
         }
-        
+
 
     }
 

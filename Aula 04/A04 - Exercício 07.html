@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 07</title>
 </head>
+
 <body>
 
     Saldo da conta: <input id="inputSaldoBanco"> <br>
@@ -18,6 +20,7 @@
     <div id="negativo"></div>
 
 </body>
+
 </html>
 
 <script>
@@ -27,7 +30,7 @@
         saldoAtual.innerHTML = `O saldo atual da conta corrente é R$${novoValor}`
 
         if (novoValor < 0) {
-        negativo.innerHTML = `<p style="color:red"> <b> O saldo atual da conta corrente é R$${novoValor} </b>`
+            negativo.innerHTML = `<p style="color:red"> <b> O saldo atual da conta corrente é R$${novoValor} </b>`
         }
     }
 

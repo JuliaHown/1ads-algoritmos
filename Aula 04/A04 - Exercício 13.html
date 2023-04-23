@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 13</title>
 </head>
+
 <body>
-    
+
     Sua primeira nota: <input id="inputNotaUm"> <br>
     Sua segunda nota: <input id="inputNotaDois"> <br>
 
@@ -19,6 +21,7 @@
     <div id="abaixoDeSeis"></div>
 
 </body>
+
 </html>
 
 <script>
@@ -28,11 +31,11 @@
         var nota2 = Number(inputNotaDois.value)
         var média = (nota1 + nota2) / 2
 
-        if(média >= 6) {
+        if (média >= 6) {
             maiorSeis.innerHTML = `Parabéns, aprovado!`
         }
 
-        if(média < 6) {
+        if (média < 6) {
             abaixoDeSeis.innerHTML = `Tente outra vez...`
         }
 
