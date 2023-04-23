@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+
+    Valor da passagem do ônibus: <input id="inputOnibus">
+    <br>
+    Quantidade de viagens por mês: <input id="inputViagens">
+    <br>
+    Distância entre trabalho e casa: <input id="inputKM">
+    <br><br>
+    <button onclick="gastos()">Calcular VT</button>
+    <div id="custos"></div>
+
+</body>
+</html>
+
+<script>
+
+    function gastos() {
+        var viagensUber = Number(inputViagens.value) * 0.10
+        var custosUber = Number(inputKM.value) * 0.75
+        var onibus = (Number(inputOnibus.value) * Number(inputViagens.value)) * 0.90
+        var gastosUber = viagensUber * custosUber
+        var total = onibus + gastosUber
+        
+        custos.innerHTML = `Você vai gastar R$${total} por mês com transporte`
+    }
+
+</script>

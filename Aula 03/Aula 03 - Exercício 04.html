@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+
+    Sabor da pizza = <input id="inputPizza">
+    <br>
+    Preço da pizza = <input id="inputPreço">
+    <br>
+    Quantidade de amigos que vão comer = <input id="inputAmigos">
+
+    <button onclick="calculo()">Ver valor por amigo</button>
+    <div id="reuniao"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calculo() {
+        var caixinha = Number(inputPreço.value) + Number(inputPreço.value) * 0.1
+        var total = caixinha / Number(inputAmigos.value)
+
+        reuniao.innerHTML = `Cada amigo vai colaborar com R$${total} para a pizza de ${inputPizza.value}.`
+    }
+</script>

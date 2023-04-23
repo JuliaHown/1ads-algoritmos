@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    Exibir tabuada do número: <input id="input_nTabuada">
+    <button onclick="tabuada()">Ver tabuada</button>
+    <div id="tabuadaSolicitada"></div>
+</body>
+</html>
+
+<script>
+    function tabuada() {
+        var numero = Number(input_nTabuada.value)
+        var dois = Number(numero * 2)
+        var tres = Number(numero * 3)
+        var quatro = Number(numero * 4)
+        var cinco = Number(numero * 5)
+        var seis = Number(numero * 6)
+        var sete = Number(numero * 7)
+        var oito = Number(numero * 8)
+        var nove = Number(numero * 9)
+        var dez = Number(numero * 10)
+
+        tabuadaSolicitada.innerHTML = `${numero} x 1 = ${numero} <br>
+        ${numero} x 2 = ${dois} <br>
+        ${numero} x 3 = ${tres} <br>
+        ${numero} x 4 = ${quatro} <br>
+        ${numero} x 5 = ${cinco} <br>
+        ${numero} x 6 = ${seis} <br>
+        ${numero} x 7 = ${sete} <br>
+        ${numero} x 8 = ${oito} <br>
+        ${numero} x 9 = ${nove} <br>
+        ${numero} x 10 = ${dez} <br>`
+        
+    }
+</script>

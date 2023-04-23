@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+
+    Ki base do guerreiro: <input id="input_força">
+    <br><br>
+    Transformar em... 
+    <br><br>
+    <button onclick="sayajin1()">SSJ</button>
+    <button onclick="sayajin2()">SSJ2</button>
+    <button onclick="sayajin3()">SSJ3</button>
+    <div id="um"></div>
+    <div id="dois"></div>
+    <div id="tres"></div>
+
+</body>
+</html>
+
+<script>
+
+    function sayajin1() {
+        var calculoSSJ = Number(input_força.value) * 50
+        um.innerHTML = `Após se transformar em Super Sayajin, o ki desse Sayajin passa a ser de ${calculoSSJ}`
+    }
+
+    function sayajin2() {
+        var calculoSSJ2 = Number(input_força.value) * 100
+        dois.innerHTML = `Após se transformar em Super Sayajin 2, o ki desse Sayajin passa a ser de ${calculoSSJ2}`
+    }
+
+    function sayajin3() {
+        var calculoSSJ3 = Number(input_força.value) * 200
+        tres.innerHTML = `Após se transformar em Super Sayajin 3, o ki desse Sayajin passa a ser de ${calculoSSJ3}`
+    }
+</script>

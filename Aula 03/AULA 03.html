@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    
+    <input id="input_texto">
+    <button onclick="ver_conteudo()">Ver Conteúdo da Div</button>
+    <button onclick="alterar_conteudo()">Alterar Conteudo da Div</button>
+    <button onclick="incrementar_conteudo()">
+        Incrementar Conteudo da Div
+    </button>
+    <button onclick="verificar_mensagem()">
+        Verificar Mensagem Digitada
+    </button>
+    <div id="div_exemplo">Este é o corpo da minha div!</div>
+
+</body>
+</html>
+
+<script>
+
+    function ver_conteudo() {
+        alert(div_exemplo.innerHTML)
+    }
+
+    function alterar_conteudo() {
+        div_exemplo.innerHTML = input_texto.value
+    }
+    
+    function incrementar_conteudo() {
+        div_exemplo.innerHTML = div_exemplo.innerHTML + input_texto.value
+    }
+
+    function verificar_mensagem() {
+    div_exemplo.innerHTML = `A mensagem é digitada é: ${input_texto.value}!`
+    // div_exemplo.innerHTML = "A mensagem digitada é: " + texto + "!"
+    }
+
+</script>

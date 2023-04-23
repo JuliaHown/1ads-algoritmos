@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    
+    Votos do candidato A: <input id="input_A"> <br>
+    Votos do candidato B: <input id="input_B"> <br>
+    Votos brancos: <input id="input_branco"> <br>
+    Votos nulos: <input id="input_nulo"> <br><br>
+
+    <button onclick="resultado()">Resultado da Eleição</button>
+    <div id="totais"></div>
+
+</body>
+</html>
+
+<script>
+
+    function resultado() {
+        var total = Number(input_A.value) + Number(input_B.value) + Number(input_branco.value) + Number(input_nulo.value)
+        var candidatoA = Number(input_A.value / total) * 100
+        var candidatoB = Number(input_B.value / total) * 100
+        var invalidos = (Number(input_branco.value) + Number(input_nulo.value)) / total * 100
+
+        totais.innerHTML = `Total de votos: ${total} <br>
+        Candidato A: ${candidatoA} % (${input_A.value} votos) <br>
+        Candidato B ${candidatoB} % (${input_B.value} votos) <br>
+        Inválidos: ${invalidos} % (${Number(input_branco.value) + Number(input_nulo.value)} votos)`
+    }
+
+</script>
