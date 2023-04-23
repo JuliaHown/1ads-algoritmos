@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    
+    Quantidade de homens no elevador: <input id="input_qtdHomens"> <br>
+    Quantidade de mulheres no elevador: <input id="input_qtdMulheres"> <br>
+
+    <button onclick="pesoElevador()">
+        Analisar peso
+    </button>
+
+    <div id="pesoSuportado"></div>
+    <div id="pesoUltrapassado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function pesoElevador() {
+        var homens = Number(input_qtdHomens.value)
+        var mulheres = Number(input_qtdMulheres.value)
+        var pesoTotal = (homens * 80) + (mulheres * 60)
+
+        if (pesoTotal > 800) {
+            pesoUltrapassado.innerHTML = ` <p style="color:blue"> Será necessário descer alguém para que o elevador se movimente`
+        }
+
+        pesoSuportado.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${pesoTotal} kg`
+    }
+</script>

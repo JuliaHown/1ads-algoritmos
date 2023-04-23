@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    Valor da Nota 01: <input id="inputNota01"> <br>
+    Valor da Nota 02: <input id="inputNota02"> <br>
+    Valor da Nota 03: <input id="inputNota03"> <br>
+
+    <button onclick="desempenho()">
+        Analisar desempenho
+    </button>
+
+    <div id="acimaMedia"></div>
+    <div id="media"></div>
+
+</html>
+
+<script>
+
+    function desempenho() {
+        var Nota1 = Number(inputNota01.value)
+        var Nota2 = Number(inputNota02.value)
+        var Nota3 = Number(inputNota03.value)
+        var MediaFinal = (Nota1 + Nota2 + Nota3) / 3
+
+        if (MediaFinal > 9.4) {
+        acimaMedia.innerHTML = `Parabéns, você é fora de série!`
+        }
+
+        media.innerHTML = `Sua média foi de ${MediaFinal}`
+    }
+
+
+</script>
