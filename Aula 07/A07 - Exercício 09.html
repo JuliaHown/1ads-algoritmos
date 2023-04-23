@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+
+    Altura inicial dos próximos pilotos <input id="input_AltInicial">
+    <br>
+    Altura final dos próximos pilotos <input id="input_AltFinal">
+    <br>
+    Nome do piloto: <input id="inputNomePiloto"> 
+    <br>
+    Altura do piloto: <input id="inputAlturaPiloto">
+
+    <button onclick="AnalisarPiloto()">
+        Analisar candidato
+    </button>
+
+    <p id="situacao"></p>
+
+</body>
+</html>
+
+<script>
+
+    function AnalisarPiloto() {
+        var AlturaInicial = Number(input_AltInicial.value);
+        var AlturaFinal = Number(input_AltFinal.value);
+        var Nome = inputNomePiloto.value;
+        var Altura = Number(inputAlturaPiloto.value);
+
+        if(AlturaInicial <= 1 && AlturaFinal <= AlturaInicial) {
+            alert("Intervalo inválido! Insira um intervalo válido")
+        } else if(AlturaInicial < 1) {
+            alert("Intervalo inválido! Insira um intervalo válido")
+        } else if(Altura >= AlturaInicial && Altura <= AlturaFinal) {
+            situacao.innerHTML = `O candidato ${Nome} com altura de 
+            ${Altura} participará do processo de seleção de piloto`
+        } else {
+            situacao.innerHTML = `Infelizmente o candidato ${Nome} 
+            com altura de ${Altura} não atende os requisitos`
+        } 
+    }
+</script>
